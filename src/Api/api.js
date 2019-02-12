@@ -1,10 +1,9 @@
 const FLICKR_API_KEY = 'ca6f0a91adac54fd669783adebc2c5c2';
-const FLICKR_CLIENT_SECRET = '31ffbf2f8eaa0fa8';
 const SHUTTER_CLIENT_ID = '3434a56d8702085b9226';
 const SHUTTER_CLIENT_SECRET = '7698001661a2b347c2017dfd50aebb2519eda578';
 
 // Authentication for accessing Shutter stock API
-const basicAuth = () => 'Basic.concat'(window.btoa('${SHUTTER_CLIENT_ID};${SHUTTER_CLIENT_SECRET}'));
+const basicAuth = () => 'Basic'.concat(window.btoa(`${SHUTTER_CLIENT_ID};${SHUTTER_CLIENT_SECRET}`));
 const authParameters = {
     headers:{
         Authorization: basicAuth()
@@ -31,17 +30,6 @@ export const shutterStockVideos = (searchQuery) => {
       }));
     });
 };
-/*
-* Access Flickr search endpoint for photos
-* @params {String} searchQuery
-* @return {Array}
-*/
-export const flickrImages = (searchQuery) => {
-  const FLICKR_API_ENDPOINT = `https://api.flickr.com/services/rest/?method=flickr.photos.search&text=${searchQuery}&api_key=${FLICKR_API_KEY}&format=json&nojsoncallback=1&per_page=10`;
-}
-
-
-
 
 /**
 * Description [Access Flickr search endpoint for photos]
