@@ -1,5 +1,5 @@
 import React from 'react';
-import { link } from 'react-router';
+import { Link } from 'react-router';
 
 // Homepage with link to the library
 const Homepage = () => (
