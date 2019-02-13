@@ -3,11 +3,11 @@ const SHUTTER_CLIENT_ID = '3434a56d8702085b9226';
 const SHUTTER_CLIENT_SECRET = '7698001661a2b347c2017dfd50aebb2519eda578';
 
 // Authentication for accessing Shutter stock API
-const basicAuth = () => 'Basic'.concat(window.btoa(`${SHUTTER_CLIENT_ID};${SHUTTER_CLIENT_SECRET}`));
+const basicAuth = () => 'Basic '.concat(window.btoa(`${SHUTTER_CLIENT_ID}:${SHUTTER_CLIENT_SECRET}`));
 const authParameters = {
-    headers:{
-        Authorization: basicAuth()
-    }
+  headers: {
+    Authorization: basicAuth()
+  }
 };
 /* Description[Access Shutterstock search endpoint for shut videos]
  * @params{string}Search Query
