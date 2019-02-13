@@ -17,4 +17,3 @@ class MediaGalleryPage extends Component {
     }
 
     export default MediaGalleryPage;
-
